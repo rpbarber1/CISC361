@@ -1,0 +1,429 @@
+Script started on 2020-04-06 20:26:20-0400
+]0;ryan@ryan-laptop: ~/School/cisc361/pa3/myshell[01;32mryan@ryan-laptop[00m:[01;34m~/School/cisc361/pa3/myshell[00m$ make
+gcc -g -c sh.c
+gcc -g -c get_path.c
+gcc -g main.c sh.o get_path.o -o mysh
+]0;ryan@ryan-laptop: ~/School/cisc361/pa3/myshell[01;32mryan@ryan-laptop[00m:[01;34m~/School/cisc361/pa3/myshell[00m$ ./mysh
+  [/home/ryan/School/cisc361/pa3/myshell]>
+  [/home/ryan/School/cisc361/pa3/myshell]>^D
+Use "exit" to leave mysh.
+  [/home/ryan/School/cisc361/pa3/myshell]>^Z^C
+  [/home/ryan/School/cisc361/pa3/myshell]>which
+Usage:
+ which "filename"
+  [/home/ryan/School/cisc361/pa3/myshell]>which ls
+Executing built-in [which]
+ls:
+/bin/ls
+  [/home/ryan/School/cisc361/pa3/myshell]>ls
+get_path.c  get_path_main.c  main.c    mysh	   sh.c  sh.o
+get_path.h  get_path.o	     Makefile  readme.txt  sh.h  testrunScript
+  [/home/ryan/School/cisc361/pa3/myshell]>
+  [/home/ryan/School/cisc361/pa3/myshell]>^D
+Use "exit" to leave mysh.
+  [/home/ryan/School/cisc361/pa3/myshell]>^Z^C
+  [/home/ryan/School/cisc361/pa3/myshell]>ls -l
+total 104
+-rwxrwxrwx 1 ryan ryan  1253 Apr  6 20:23 get_path.c
+-rwxrwxrwx 1 ryan ryan   362 Apr  2 19:05 get_path.h
+-rwxrwxrwx 1 ryan ryan   467 Apr  2 19:05 get_path_main.c
+-rw-r--r-- 1 ryan ryan  7160 Apr  6 20:26 get_path.o
+-rwxrwxrwx 1 ryan ryan   399 Apr  4 18:13 main.c
+-rwxrwxrwx 1 ryan ryan   304 Apr  2 19:05 Makefile
+-rwxr-xr-x 1 ryan ryan 27984 Apr  6 20:26 mysh
+-rw-r--r-- 1 ryan ryan   461 Apr  6 20:06 readme.txt
+-rwxrwxrwx 1 ryan ryan 11017 Apr  6 20:15 sh.c
+-rwxrwxrwx 1 ryan ryan   534 Apr  2 19:05 sh.h
+-rw-r--r-- 1 ryan ryan 25696 Apr  6 20:26 sh.o
+-rw-r--r-- 1 ryan ryan     0 Apr  6 20:26 testrunScript
+  [/home/ryan/School/cisc361/pa3/myshell]>ls -l -a /proc/tty
+total 0
+dr-xr-xr-x   4 root root 0 Apr  6 20:19 .
+dr-xr-xr-x 277 root root 0 Apr  2 20:49 ..
+dr-x------   2 root root 0 Apr  6 20:19 driver
+-r--r--r--   1 root root 0 Apr  6 20:19 drivers
+dr-xr-xr-x   2 root root 0 Apr  6 20:19 ldisc
+-r--r--r--   1 root root 0 Apr  6 20:19 ldiscs
+  [/home/ryan/School/cisc361/pa3/myshell]>ls -l -F /proc/tty
+total 0
+dr-x------ 2 root root 0 Apr  6 20:19 driver/
+-r--r--r-- 1 root root 0 Apr  6 20:19 drivers
+dr-xr-xr-x 2 root root 0 Apr  6 20:19 ldisc/
+-r--r--r-- 1 root root 0 Apr  6 20:19 ldiscs
+  [/home/ryan/School/cisc361/pa3/myshell]>ls -l -F /etc/perl
+total 12
+drwxr-xr-x 2 root root 4096 Nov 19  2018 CPAN/
+drwxr-xr-x 2 root root 4096 Feb  3 13:26 Net/
+drwxr-xr-x 3 root root 4096 Feb  3 13:26 XML/
+  [/home/ryan/School/cisc361/pa3/myshell]>ls -l -a /etc/perl
+total 28
+drwxr-xr-x   5 root root  4096 Feb  3 13:26 .
+drwxr-xr-x 121 root root 12288 Apr  6 19:38 ..
+drwxr-xr-x   2 root root  4096 Nov 19  2018 CPAN
+drwxr-xr-x   2 root root  4096 Feb  3 13:26 Net
+drwxr-xr-x   3 root root  4096 Feb  3 13:26 XML
+  [/home/ryan/School/cisc361/pa3/myshell]>where
+Usage:
+ where "filename"
+  [/home/ryan/School/cisc361/pa3/myshell]>where ls
+Executing built-in [where]
+ls:
+/bin/ls
+  [/home/ryan/School/cisc361/pa3/myshell]>/bin/ls -l -g
+total 104
+-rwxrwxrwx 1 ryan  1253 Apr  6 20:23 get_path.c
+-rwxrwxrwx 1 ryan   362 Apr  2 19:05 get_path.h
+-rwxrwxrwx 1 ryan   467 Apr  2 19:05 get_path_main.c
+-rw-r--r-- 1 ryan  7160 Apr  6 20:26 get_path.o
+-rwxrwxrwx 1 ryan   399 Apr  4 18:13 main.c
+-rwxrwxrwx 1 ryan   304 Apr  2 19:05 Makefile
+-rwxr-xr-x 1 ryan 27984 Apr  6 20:26 mysh
+-rw-r--r-- 1 ryan   461 Apr  6 20:06 readme.txt
+-rwxrwxrwx 1 ryan 11017 Apr  6 20:15 sh.c
+-rwxrwxrwx 1 ryan   534 Apr  2 19:05 sh.h
+-rw-r--r-- 1 ryan 25696 Apr  6 20:26 sh.o
+-rw-r--r-- 1 ryan     0 Apr  6 20:26 testrunScript
+  [/home/ryan/School/cisc361/pa3/myshell]>/bin/ls -l
+total 104
+-rwxrwxrwx 1 ryan ryan  1253 Apr  6 20:23 get_path.c
+-rwxrwxrwx 1 ryan ryan   362 Apr  2 19:05 get_path.h
+-rwxrwxrwx 1 ryan ryan   467 Apr  2 19:05 get_path_main.c
+-rw-r--r-- 1 ryan ryan  7160 Apr  6 20:26 get_path.o
+-rwxrwxrwx 1 ryan ryan   399 Apr  4 18:13 main.c
+-rwxrwxrwx 1 ryan ryan   304 Apr  2 19:05 Makefile
+-rwxr-xr-x 1 ryan ryan 27984 Apr  6 20:26 mysh
+-rw-r--r-- 1 ryan ryan   461 Apr  6 20:06 readme.txt
+-rwxrwxrwx 1 ryan ryan 11017 Apr  6 20:15 sh.c
+-rwxrwxrwx 1 ryan ryan   534 Apr  2 19:05 sh.h
+-rw-r--r-- 1 ryan ryan 25696 Apr  6 20:26 sh.o
+-rw-r--r-- 1 ryan ryan     0 Apr  6 20:26 testrunScript
+  [/home/ryan/School/cisc361/pa3/myshell]>file *
+Makefile:        ASCII text
+get_path.c:      C source, ASCII text
+get_path.h:      C source, ASCII text
+get_path.o:      ELF 64-bit LSB relocatable, x86-64, version 1 (SYSV), with debug_info, not stripped
+get_path_main.c: C source, ASCII text
+main.c:          C source, ASCII text
+mysh:            ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 3.2.0, BuildID[sha1]=b5f3ccf4a21c52bee37a996a6646c1ae84442b37, with debug_info, not stripped
+readme.txt:      ASCII text
+sh.c:            C source, ASCII text
+sh.h:            C source, ASCII text
+sh.o:            ELF 64-bit LSB relocatable, x86-64, version 1 (SYSV), with debug_info, not stripped
+testrunScript:   ASCII text, with CRLF, LF line terminators, with escape sequences
+  [/home/ryan/School/cisc361/pa3/myshell]>ls *
+get_path.c  get_path_main.c  main.c    mysh	   sh.c  sh.o
+get_path.h  get_path.o	     Makefile  readme.txt  sh.h  testrunScript
+  [/home/ryan/School/cisc361/pa3/myshell]>ls *.c
+get_path.c  get_path_main.c  main.c  sh.c
+  [/home/ryan/School/cisc361/pa3/myshell]>ls -l sh.*
+-rwxrwxrwx 1 ryan ryan 11017 Apr  6 20:15 sh.c
+-rwxrwxrwx 1 ryan ryan   534 Apr  2 19:05 sh.h
+-rw-r--r-- 1 ryan ryan 25696 Apr  6 20:26 sh.o
+  [/home/ryan/School/cisc361/pa3/myshell]>ls -l s*.c
+-rwxrwxrwx 1 ryan ryan 11017 Apr  6 20:15 sh.c
+  [/home/ryan/School/cisc361/pa3/myshell]>ls -l s*h.c
+-rwxrwxrwx 1 ryan ryan 11017 Apr  6 20:15 sh.c
+  [/home/ryan/School/cisc361/pa3/myshell]>ls sh.?
+sh.c  sh.h  sh.o
+  [/home/ryan/School/cisc361/pa3/myshell]>ls ?h.c
+sh.c
+  [/home/ryan/School/cisc361/pa3/myshell]>ls *.?
+get_path.c  get_path_main.c  main.c  sh.h
+get_path.h  get_path.o	     sh.c    sh.o
+  [/home/ryan/School/cisc361/pa3/myshell]>blah
+Error: No such file or directory
+  [/home/ryan/School/cisc361/pa3/myshell]>/blah
+Error: No such file or directory
+  [/home/ryan/School/cisc361/pa3/myshell]>ls -l /blah
+ls: cannot access '/blah': No such file or directory
+  [/home/ryan/School/cisc361/pa3/myshell]>/usr/bin
+Error: Permission denied
+  [/home/ryan/School/cisc361/pa3/myshell]>/usr   bin/ls -la /
+total 2097264
+drwxr-xr-x  24 root root       4096 Apr  2 19:44 .
+drwxr-xr-x  24 root root       4096 Apr  2 19:44 ..
+drwxr-xr-x   2 root root       4096 Apr  2 20:05 bin
+drwxr-xr-x   4 root root       4096 Apr  2 20:10 boot
+drwxr-xr-x   2 root root       4096 Apr  2 19:41 cdrom
+drwxr-xr-x  20 root root       4680 Apr  3 20:54 dev
+drwxr-xr-x 121 root root      12288 Apr  6 19:38 etc
+drwxr-xr-x   3 root root       4096 Apr  2 19:42 home
+lrwxrwxrwx   1 root root         32 Apr  2 19:44 initrd.img -> boot/initrd.img-5.3.0-28-generic
+lrwxrwxrwx   1 root root         32 Apr  2 19:44 initrd.img.old -> boot/initrd.img-5.3.0-28-generic
+drwxr-xr-x  21 root root       4096 Apr  2 19:51 lib
+drwxr-xr-x   2 root root       4096 Feb  3 13:22 lib64
+drwx------   2 root root      16384 Apr  2 19:36 lost+found
+drwxr-xr-x   3 root root       4096 Apr  2 19:57 media
+drwxr-xr-x   2 root root       4096 Feb  3 13:22 mnt
+drwxr-xr-x   6 root root       4096 Apr  5 17:05 opt
+dr-xr-xr-x 277 root root          0 Apr  2 20:49 proc
+drwx------   3 root root       4096 Feb  3 13:28 root
+drwxr-xr-x  30 root root        980 Apr  6 17:11 run
+drwxr-xr-x   2 root root      12288 Apr  2 20:05 sbin
+drwxr-xr-x  12 root root       4096 Apr  3 20:54 snap
+drwxr-xr-x   2 root root       4096 Feb  3 13:22 srv
+-rw-------   1 root root 2147483648 Apr  2 19:36 swapfile
+dr-xr-xr-x  13 root root          0 Apr  2 20:49 sys
+drwxrwxrwt  19 root root       4096 Apr  6 20:26 tmp
+drwxr-xr-x  11 root root       4096 Feb  3 13:25 usr
+drwxr-xr-x  14 root root       4096 Feb  3 13:30 var
+lrwxrwxrwx   1 root root         29 Apr  2 19:44 vmlinuz -> boot/vmlinuz-5.3.0-28-generic
+  [/home/ryan/School/cisc361/pa3/myshell]>file /bin/ls /bin/rm
+/bin/ls: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 3.2.0, BuildID[sha1]=9567f9a28e66f4d7ec4baf31cfbf68d0410f0ae6, stripped
+/bin/rm: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 3.2.0, BuildID[sha1]=864c9bbef111ce358b3452cf7ea457d292ba93f0, stripped
+  [/home/ryan/School/cisc361/pa3/myshell]>which ls rm
+Executing built-in [which]
+ls:
+/bin/ls
+rm:
+/bin/rm
+  [/home/ryan/School/cisc361/pa3/myshell]>where ls rm
+Executing built-in [where]
+ls:
+/bin/ls
+rm:
+/bin/rm
+  [/home/ryan/School/cisc361/pa3/myshell]>list
+Executing built-in [list]
+
+/home/ryan/School/cisc361/pa3/myshell:
+	sh.o
+	sh.h
+	testrunScript
+	readme.txt
+	get_path_main.c
+	.
+	..
+	main.c
+	get_path.o
+	get_path.h
+	Makefile
+	mysh
+	get_path.c
+	sh.c
+  [/home/ryan/School/cisc361/pa3/myshell]>list / /usr/proc/bin
+Executing built-in [list]
+
+/:
+	sys
+	srv
+	lib64
+	cdrom
+	.
+	usr
+	tmp
+	..
+	lost+found
+	media
+	run
+	initrd.img.old
+	home
+	etc
+	vmlinuz
+	proc
+	sbin
+	boot
+	mnt
+	dev
+	lib
+	initrd.img
+	var
+	root
+	opt
+	snap
+	bin
+	swapfile
+Error: No such file or directory
+  [/home/ryan/School/cisc361/pa3/myshell]>cd
+Executing built-in [cd]
+  [/home/ryan]>pwd
+Executing built-in [pwd]
+/home/ryan
+  [/home/ryan]>cd /blah
+Executing built-in [cd]
+Error: No such file or directory
+  [/home/ryan]>cd /usr/bin /usr/ucb
+Too many arguments.
+  [/home/ryan]>cd -
+Executing built-in [cd]
+  [/home/ryan/School/cisc361/pa3/myshell]>pwd
+Executing built-in [pwd]
+/home/ryan/School/cisc361/pa3/myshell
+  [/home/ryan/School/cisc361/pa3/myshell]>./ls /
+Error: No such file or directory
+  [/home/ryan/School/cisc361/pa3/myshell]>../bin/ls /
+Error: No such file or directory
+  [/home/ryan/School/cisc361/pa3/myshell]>pid
+Executing built-in [pid]
+shell pid: 19297
+  [/home/ryan/School/cisc361/pa3/myshell]>prompt CISC361
+Executing built-in [prompt]
+CISC361 [/home/ryan/School/cisc361/pa3/myshell]>PROMPT      prompt
+Executing built-in [prompt]
+Enter prompt prefix: hello
+hello [/home/ryan/School/cisc361/pa3/myshell]>printenv
+Executing built-in [printenv]
+CLUTTER_IM_MODULE=xim
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_MENU_PREFIX=gnome-
+LANG=en_US.UTF-8
+MANAGERPID=1291
+DISPLAY=:0
+OLDPWD=/home/ryan/School/cisc361/pa3
+INVOCATION_ID=6470b2a225cf4c46b3b226311bd6a763
+GNOME_SHELL_SESSION_MODE=ubuntu
+COLORTERM=truecolor
+USERNAME=ryan
+XDG_VTNR=2
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+XDG_SESSION_ID=2
+USER=ryan
+DESKTOP_SESSION=ubuntu
+QT4_IM_MODULE=xim
+TEXTDOMAINDIR=/usr/share/locale/
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/54d0b9d2_f74b_4c3c_aba1_8ab8e5630f2c
+PWD=/home/ryan/School/cisc361/pa3/myshell
+HOME=/home/ryan
+JOURNAL_STREAM=9:28231
+TEXTDOMAIN=im-config
+SSH_AGENT_PID=1415
+QT_ACCESSIBILITY=1
+XDG_SESSION_TYPE=x11
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_SESSION_DESKTOP=ubuntu
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=1501ce79fd8355046563c31a5e86886f
+GTK_MODULES=gail:atk-bridge
+WINDOWPATH=2
+VTE_VERSION=5202
+SHELL=/bin/bash
+TERM=xterm-256color
+QT_IM_MODULE=xim
+XMODIFIERS=@im=ibus
+IM_CONFIG_PHASE=2
+DBUS_STARTER_BUS_TYPE=session
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+GNOME_TERMINAL_SERVICE=:1.488
+SHLVL=2
+XDG_SEAT=seat0
+GDMSESSION=ubuntu
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LOGNAME=ryan
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=1501ce79fd8355046563c31a5e86886f
+XDG_RUNTIME_DIR=/run/user/1000
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SESSION_MANAGER=local/ryan-laptop:@/tmp/.ICE-unix/1320,unix/ryan-laptop:/tmp/.ICE-unix/1320
+LESSOPEN=| /usr/bin/lesspipe %s
+GTK_IM_MODULE=ibus
+_=./mysh
+hello [/home/ryan/School/cisc361/pa3/myshell]>printenv PATH
+Executing built-in [printenv]
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+hello [/home/ryan/School/cisc361/pa3/myshell]>setenv
+Executing built-in [setenv]
+CLUTTER_IM_MODULE=xim
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_MENU_PREFIX=gnome-
+LANG=en_US.UTF-8
+MANAGERPID=1291
+DISPLAY=:0
+OLDPWD=/home/ryan/School/cisc361/pa3
+INVOCATION_ID=6470b2a225cf4c46b3b226311bd6a763
+GNOME_SHELL_SESSION_MODE=ubuntu
+COLORTERM=truecolor
+USERNAME=ryan
+XDG_VTNR=2
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+XDG_SESSION_ID=2
+USER=ryan
+DESKTOP_SESSION=ubuntu
+QT4_IM_MODULE=xim
+TEXTDOMAINDIR=/usr/share/locale/
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/54d0b9d2_f74b_4c3c_aba1_8ab8e5630f2c
+PWD=/home/ryan/School/cisc361/pa3/myshell
+HOME=/home/ryan
+JOURNAL_STREAM=9:28231
+TEXTDOMAIN=im-config
+SSH_AGENT_PID=1415
+QT_ACCESSIBILITY=1
+XDG_SESSION_TYPE=x11
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_SESSION_DESKTOP=ubuntu
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=1501ce79fd8355046563c31a5e86886f
+GTK_MODULES=gail:atk-bridge
+WINDOWPATH=2
+VTE_VERSION=5202
+SHELL=/bin/bash
+TERM=xterm-256color
+QT_IM_MODULE=xim
+XMODIFIERS=@im=ibus
+IM_CONFIG_PHASE=2
+DBUS_STARTER_BUS_TYPE=session
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+GNOME_TERMINAL_SERVICE=:1.488
+SHLVL=2
+XDG_SEAT=seat0
+GDMSESSION=ubuntu
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LOGNAME=ryan
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=1501ce79fd8355046563c31a5e86886f
+XDG_RUNTIME_DIR=/run/user/1000
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SESSION_MANAGER=local/ryan-laptop:@/tmp/.ICE-unix/1320,unix/ryan-laptop:/tmp/.ICE-unix/1320
+LESSOPEN=| /usr/bin/lesspipe %s
+GTK_IM_MODULE=ibus
+_=./mysh
+hello [/home/ryan/School/cisc361/pa3/myshell]>setenv TEST
+Executing built-in [setenv]
+hello [/home/ryan/School/cisc361/pa3/myshell]>PRINT     printenv TEST
+Executing built-in [printenv]
+
+hello [/home/ryan/School/cisc361/pa3/myshell]>setenv TEST testing
+Executing built-in [setenv]
+hello [/home/ryan/School/cisc361/pa3/myshell]>printenv TEST
+Executing built-in [printenv]
+testing
+hello [/home/ryan/School/cisc361/pa3/myshell]>setenv tes   TEST testing more
+Too many arguments.
+hello [/home/ryan/School/cisc361/pa3/myshell]>setenv HOME /
+Executing built-in [setenv]
+hello [/home/ryan/School/cisc361/pa3/myshell]>printenv HOME
+Executing built-in [printenv]
+/
+hello [/home/ryan/School/cisc361/pa3/myshell]>CD  cd
+Executing built-in [cd]
+hello [/]>pwd
+Executing built-in [pwd]
+/
+hello [/]>exit
+Executing built-in [exit]
+Exiting shell
+]0;ryan@ryan-laptop: ~/School/cisc361/pa3/myshell[01;32mryan@ryan-laptop[00m:[01;34m~/School/cisc361/pa3/myshell[00m$ ./mysh
+  [/home/ryan/School/cisc361/pa3/myshell]>pid
+Executing built-in [pid]
+shell pid: 19361
+  [/home/ryan/School/cisc361/pa3/myshell]>kill
+Usage:
+kill [p | pid]
+kill [-s | signal num] [p | pid]
+  [/home/ryan/School/cisc361/pa3/myshell]>kill 19361
+Executing built-in [kill]
+Terminated
+]0;ryan@ryan-laptop: ~/School/cisc361/pa3/myshell[01;32mryan@ryan-laptop[00m:[01;34m~/School/cisc361/pa3/myshell[00m$ ./mysh
+  [/home/ryan/School/cisc361/pa3/myshell]>pid
+Executing built-in [pid]
+shell pid: 19362
+  [/home/ryan/School/cisc361/pa3/myshell]>kill -1 19362
+Executing built-in [kill]
+Hangup
+]0;ryan@ryan-laptop: ~/School/cisc361/pa3/myshell[01;32mryan@ryan-laptop[00m:[01;34m~/School/cisc361/pa3/myshell[00m$ exit
+exit
+
+Script done on 2020-04-06 20:34:37-0400
